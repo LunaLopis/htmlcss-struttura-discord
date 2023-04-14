@@ -18,7 +18,6 @@
     justify-content: space-between;
 }
 
-
 .row-centered .col {
     border: 1px dashed black;
     width: calc(100% / 3);
@@ -26,34 +25,31 @@
     padding: 10px;
 }
 
-
-
 /* FINE barra, INIZIO BOX BLU*/
-
-.blubox {
-    background-color: rgb(13, 13, 97);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.pinkbox {
-    background-color: rgb(247, 77, 106);
-    width: calc(60% - 20px);
-    margin: 20px;
-    border: 1px dashed black;
-    height: 300px;
-}
-
-/* fine box blu ed header, inizio main */
-
 .container {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.container .col {
+.content {
+    width: calc(60% - 20px);
+    margin: 20px;
+    border: 1px dashed black;
+    height: 300px;
+}
+
+.container.blu {
+    background-color: rgb(13, 13, 97);
+}
+
+.content.pink {
+    background-color: rgb(247, 77, 106);
+}
+
+/* fine box blu ed header, inizio main */
+
+.container>.col {
     margin: 20px;
     width: calc(60% - 20px);
     border: 1px dashed black;
@@ -74,40 +70,16 @@
 
 /* fine zezione main bianca */
 
-.container.second {
+.container.grey {
     background-color: lightgray;
 }
 
-.second .col {
+.grey .col {
     margin: 20px;
     width: calc(60% - 20px);
     border: 1px dashed black;
     display: flex;
     flex-direction: row-reverse;
-}
-
-/* fine seconda sezione main */
-
-.therd {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.therd .col {
-    margin: 20px;
-    width: calc(60% - 20px);
-    border: 1px dashed black;
-    display: flex;
-}
-
-/* fine terza sezione, inizio sezione con box verde */
-
-.big {
-    background-color: rgb(153, 153, 157);
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .green {
@@ -120,14 +92,12 @@
 
 /* fine sezione con box verde */
 
-.colonne {
-    background-color: grey;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.container.darkgrey {
+    background-color: rgb(83, 82, 82);
+
 }
 
-.colonne .row {
+.darkgrey .content {
     width: calc(60% - 20px);
     flex-direction: column;
     background-color: black;
@@ -138,15 +108,15 @@
     flex-direction: row;
 }
 
-.colonne .col {
+.darkgrey .col {
     width: calc(80%/5);
     background-color: blueviolet;
     border: 1px dashed black;
-    height: 300px;   
+    height: 300px;
 }
 
 .col.bigger {
-    width:calc(20%);
+    width: calc(20%);
     flex-grow: 1;
     background-color: brown;
     border: 1px dashed black;
